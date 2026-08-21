@@ -10,3 +10,4 @@
 # 现在改为：仅当 mmdvm feed 不存在时才追加
 # ============================================================
 
+echo "src-git mmdvm https://github.com/fndsz/mmdvm-op" >> feeds.conf.default
