@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: Build GL MT300Nv2
+name: Build ostar
 
 on:
   repository_dispatch:
@@ -18,7 +18,7 @@ on:
 
 
 env:
-  REPO_URL: https://github.com/openwrt/openwrt.git
+  REPO_URL: https://github.com/fndsz/ostar.git
   REPO_BRANCH: openwrt-19.07
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: mt300n.config
