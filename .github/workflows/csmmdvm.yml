@@ -6,22 +6,8 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: csmmdvm
-
-on:
-  release:
-    types: [published]
-  push:
-    branches:
-      - dev-19.07
-    paths:
-      - '.config'
-  #schedule:
-  #    - cron: 0 22 * * *
-  watch:
-    types: [started]
-
-env:
+  name: csmmdvm
+  env:
   REPO_URL: https://github.com/Lienol/openwrt
   REPO_BRANCH: 19.07
   CONFIG_FILE: .config
