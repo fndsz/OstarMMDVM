@@ -1,6 +1,5 @@
 #
-# https://github.com/P3TERX/Actions-OpenWrt
-# OstarMMDVM - 修正版
+# OstarMMDVM - 修正版 (解决 feeds 重复 + 编译失败隐藏问题)
 #
 
 name: Build ostar
@@ -15,7 +14,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
-  DIY_P2_SH: diy-part2.sh          # 修正：原 diy-part2-mt300n.sh 不存在
+  DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: false
@@ -94,7 +93,6 @@ jobs:
         make download -j8
         find dl -size -1024c -exec rm -f {} \;
 
-    # 排障期：单线程 + 详细日志，让真实错误直接暴露
     - name: Compile the firmware
       id: compile
       run: |
