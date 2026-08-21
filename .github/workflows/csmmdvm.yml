@@ -6,12 +6,12 @@
 # Blog: https://p3terx.com
 #=================================================
 
-  name: csmmdvm
+name: Build csostar
 
-  on:
+on:
   repository_dispatch:
   workflow_dispatch:
-  
+
 env:
   REPO_URL: https://github.com/Lienol/openwrt
   REPO_BRANCH: 19.07
