@@ -1,10 +1,19 @@
-#!/bin/bash # 
-# OstarMMDVM diy-part1.sh 
-# 在 Update feeds 之前执行 # 
-# 替换 mmdvm feed 为 fndsz/mmdvm-op（包含核心 MMDVM 包） 
-sed -i "/src-git mmdvm/d" feeds.conf.default 
-echo "src-git mmdvm https://github.com/fndsz/mmdvm-op" >> feeds.conf.default
-# 添加 devtools feed（包含 oled-tool, libaruipioled） 
-echo "src-git devtools https://github.com/lazywalker/devtools-feeds" >> feeds.conf.default 
-echo "feeds.conf.default 已更新:"
-cat feeds.conf.default
+#!/bin/bash
+#
+# Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
+#
+# This is free software, licensed under the MIT License.
+# See /LICENSE for more information.
+#
+# https://github.com/P3TERX/Actions-OpenWrt
+# File name: diy-part1.sh
+# Description: OpenWrt DIY script part 1 (Before Update feeds)
+#
+
+# Uncomment a feed source
+#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+
+# Add a feed source
+git clone https://github.com/fndsz/mmdvm-op.git package/mmdvm/mmdvm-openwrt
+
+git clone https://github.com/lazywalker/devtools-feeds.git package/led/devtools
