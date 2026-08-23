@@ -9,10 +9,10 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/fndsz/immortalwrt
-  REPO_BRANCH: openwrt-21.02
+  REPO_URL: https://github.com/fndsz/ostar
+  REPO_BRANCH: ostar-19.07
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: 2102.config
+  CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: true
